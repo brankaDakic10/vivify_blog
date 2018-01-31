@@ -29,7 +29,6 @@
 
         <div class="col-sm-8 blog-main">
             <!-- /.blog-post -->
-<?php include 'partials/single-post.php';?>
 <?php include 'partials/posts.php';?>
            <!-- /.blog-post -->
 
