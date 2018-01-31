@@ -1,13 +1,16 @@
+
+/*Smanjiti veličinu fonta na celom projektu na 14px (html element)*/
 body {
         font-size: 14px !important;
     }
 
+/*Promeniti boju pozadine navbar-a: #b34848*/
 
- .nav{
+ .blog-masthead {
   	background-color: #b34848 !important;
   }  
 
-
+/*Zameniti boju svih naslova (ne samo naslova postova) bojom #b34848*/
   h1,
 .h1,
 h2,
@@ -23,6 +26,7 @@ h6,
     color: #b34848 !important;
 }
 
+/*Naslovi postova na hover treba da ostanu iste boje, samo će dobiti underline*/
 h2 a{
 	color: #b34848 !important;
 }
