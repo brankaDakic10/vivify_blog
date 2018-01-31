@@ -1,5 +1,6 @@
 <div class="blog-post">
-                <h2 class="blog-post-title">Another blog post</h2>
+	
+                <h2 class="blog-post-title"><a href="/partials/single-post2.php">Another blog post</a></h2>
                 <p class="blog-post-meta">December 23, 2013 by <a href="#">Jacob</a></p>
 
                 <p>Cum sociis natoque penatibus et magnis <a href="#">dis parturient montes</a>, nascetur ridiculus mus. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.</p>
