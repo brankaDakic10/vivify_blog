@@ -46,6 +46,9 @@ include "header.php";
 <p class="blog-post-meta"><?php echo($singlePost['Created_at']) ?>  by <a href="#"><?php echo($singlePost['Author']) ?></a></p>
 <p><?php echo($singlePost['Body']) ?></p>
 
+<button type="button" class="btn btn-default btn-comments">Hide comments</button>
+
+
 
 
 <?php
@@ -58,16 +61,20 @@ include "header.php";
                 $com->setFetchMode(PDO::FETCH_ASSOC);
                 $comments = $com->fetchAll();
                 foreach ($comments as $comment) { ?>
+                <!-- added div with comment-info-->
+                <div class="comment-info">
                     <hr>
-                    <ul>
+                    <ul >
                         <li><p><h6><i>Comment: </i></h6><?php echo($comment['Text']) ?></p></li>
                         <li><h6><i>Author by </i><?php echo($comment['Author']) ?></h6></li>
                     </ul>
+                   
                 <?php } ?>
 
 
 
                 <hr>
+                 </div>
             </div><!-- /.blog-post -->
             <nav class="blog-pagination">
                 <a class="btn btn-outline-primary" href="#">Older</a>
@@ -77,3 +84,4 @@ include "header.php";
         <?php include "sidebar.php"; ?>
     </div><!-- /.blog-main -->
 </main><!-- /.container -->
+  <?php include "footer.php"; ?>
