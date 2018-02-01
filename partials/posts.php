@@ -1,21 +1,7 @@
 <?php 
-// Zadatak4//
-$servername='127.0.0.1';
-$username='root';
-$password='vivify';
-$dbname='blog';
-
- try {
-        $connection = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-        // set the PDO error mode to exception
-        $connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    }
-    catch(PDOException $e)
-    {
-        echo $e->getMessage();
-    }
 
 
+ include 'connection.php';
 
 
 
@@ -41,7 +27,13 @@ $dbname='blog';
 
 
 
+
+
+
+
+
  ?>
+
 
 
             <?php
@@ -49,7 +41,9 @@ $dbname='blog';
             ?>
              <div class="blog-post">
 
-                <h2 class="blog-post-title"><a href="/partials/single-post1.php"><?php echo($post['Title']) ?></a></h2>
+                                             <!-- added  a href for 10.task -->
+
+                <h2 class="blog-post-title"><a href="partials/single-post.php?Post_id=<?php echo($post['Id']) ?>"><?php echo($post['Title']) ?></a></h2>
                 <p class="blog-post-meta"><?php echo($post['Created_at']) ?> by <a href="#"><?php echo($post['Author']) ?></a></p>
 
                 <p><?php echo($post['Body']) ?></p>

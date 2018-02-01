@@ -2,6 +2,10 @@
 
  <div class="blog-post">
 
+
+
+
+
                 <h2 class="blog-post-title"><a href="/partials/single-post1.php">Sample blog post</a></h2>
                 <p class="blog-post-meta">January 1, 2014 by <a href="#">Mark</a></p>
 
