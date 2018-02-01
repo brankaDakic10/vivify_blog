@@ -1,19 +1,10 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"
-      integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-<link rel="icon" type="image/png" href="images/images.png"/>
-<link href="styles/blog.css" rel="stylesheet">
-<link rel="stylesheet" href="styles/styles.css">
-<title>Blog</title>
-<?php
-include "header.php"; ?>
-<main role="main" class="container">
-    <div class="row">
-        <div class="col-sm-8 blog-main">
-            <div class="blog-post">
-
 
 <?php
+include "header.php"; 
 
+
+
+// izbrisi jedan od ova dva upita ,prvi i prilagodi ostale
 
 
  include 'connection.php';
@@ -46,8 +37,12 @@ include "header.php"; ?>
 
 ?>
 
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-sm-8 blog-main">
+            <div class="blog-post">
 
-<h2 class="blog-post-title"><a href="single-post.php"><?php echo($singlePost['Title']) ?></a></h2>
+<h2 class="blog-post-title"><?php echo($singlePost['Title']) ?></h2>
 <p class="blog-post-meta"><?php echo($singlePost['Created_at']) ?>  by <a href="#"><?php echo($singlePost['Author']) ?></a></p>
 <p><?php echo($singlePost['Body']) ?></p>
 
@@ -56,8 +51,8 @@ include "header.php"; ?>
 <?php
                 $com_id = $_GET['Post_id'];
 
-
-                $sql = "SELECT * FROM comments  INNER JOIN posts ON comments.Post_id = posts.Id where comments.Post_id = ".$com_id;
+                $sql = "SELECT * FROM posts INNER JOIN comments ON posts.Id = comments.Post_id where posts.Id = ".$com_id;
+               
                 $com = $connection->prepare($sql);
                 $com->execute();
                 $com->setFetchMode(PDO::FETCH_ASSOC);
