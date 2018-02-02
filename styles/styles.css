@@ -30,3 +30,19 @@ h6,
 h2 a{
 	color: #b34848 !important;
 }
+
+.comment-form{
+	padding:16px 0;
+}
+
+
+.comment-form input{
+	width: 200px;
+}
+.submit-form{
+	width: 100px;
+	height: 40px;
+	border-radius: 4px;
+	background-color:pink;
+}
+

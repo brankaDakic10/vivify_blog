@@ -46,6 +46,23 @@ include "header.php";
 <p class="blog-post-meta"><?php echo($singlePost['Created_at']) ?>  by <a href="#"><?php echo($singlePost['Author']) ?></a></p>
 <p><?php echo($singlePost['Body']) ?></p>
 
+<!-- implementirati formu za dodavanje komentara, koja će na submit dodati novi komentar u bazu i prikazati ga na datoj stranici.  -->
+
+<div class="comment-form">
+<form action="../partials/create-comment.php?Post_id=<?php echo($singlePost['Id'])?>" method="post">
+  <label for="name">Author name:</label><br>
+  <input type="text" name="name" id="name" placeholder="Enter your name"><br>
+  <label for="commentId">Comment ID:</label><br>
+  <input type="number" name="commentId" id="commentId" placeholder="Enter your ID"><br>
+  <label for="name">Comment:</label><br>
+  <textarea rows="5" cols="50" name="comment" placeholder="Enter comment here..."></textarea><br>
+  <input type="submit" class="submit-form" value="Submit"><br>
+</form>
+</div>
+
+<!--  -->
+
+
 <button type="button" class="btn btn-default btn-comments">Hide comments</button>
 
 
