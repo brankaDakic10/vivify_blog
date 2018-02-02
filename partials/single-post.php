@@ -51,7 +51,11 @@ include "header.php";
 
 
 
-<?php
+<?php          
+
+// com_id = $_GET['Post_id']
+// add Post_id in a href for aside
+
                 $com_id = $_GET['Post_id'];
 
                 $sql = "SELECT * FROM posts INNER JOIN comments ON posts.Id = comments.Post_id where posts.Id = ".$com_id;
